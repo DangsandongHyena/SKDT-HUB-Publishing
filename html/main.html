@@ -35,6 +35,30 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
+			// 타이틀 상단 고정
+			$(window).scroll(function () {
+				var scroll = $(window).scrollTop();
+				var sub1_top = $('.byIndustry').offset().top;
+				var sub2_top = $('.DTInsight').offset().top - 5;
+				
+				if(scroll < sub1_top - 0){
+					$('.byIndustry .tit').removeClass('fixed');
+					$('nav.gnb').removeClass('hide');
+				} else if(scroll > sub1_top - 0){
+					$('.byIndustry .tit').addClass('fixed');
+					$('nav.gnb').addClass('hide');
+				}
+
+				if(scroll < sub2_top){
+					$('.DTInsight .tit').removeClass('fixed');
+				} else if(scroll > sub2_top){
+					$('.byIndustry .tit').removeClass('fixed');
+					$('.DTInsight .tit').addClass('fixed');
+				}
+
+			});
+
+			smoothScroll();
 			initHeaderGnb(); //Header GNB 
 			floatSticky(); //quick
 		});
@@ -160,7 +184,7 @@
 		<!-- //header -->
 
 		<!-- main visual -->
-		<div class="main_visual_area">
+		<div class="main_visual_area" id="visual">
 			<div class="main_visual">
 				<div class="swiper MainSlider ">
 					<div class="swiper-wrapper">
@@ -208,16 +232,16 @@
 			<!-- left nav -->
 			<div class="left_nav">
 				<ul>
-					<li><a href="#none">MAIN</a></li>
-					<li><a href="#none">SOLUTION ROADMAP</a></li>
-					<li><a href="#none">BY INDUSTRY</a></li>
-					<li><a href="#none">DT INSIGHT</a></li>
-					<li><a href="#none">VIDEO CONTENTS</a></li>
+					<li><a href="#visual">MAIN</a></li>
+					<li><a href="#solution">SOLUTION ROADMAP</a></li>
+					<li><a href="#Industry">BY INDUSTRY</a></li>
+					<li><a href="#Insight">DT INSIGHT</a></li>
+					<li><a href="#video">VIDEO CONTENTS</a></li>
 				</ul>
 			</div>
 
 			<!-- Solution Roadmap -->
-			<div class="main_con">
+			<div class="main_con" id="solution">
 				<div class="tit">
 					<div>
 						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Solution Roadmap</h4>
@@ -498,7 +522,7 @@
 			</div>
 
 			<!-- By Industry -->
-			<div class="main_con byIndustry">
+			<div class="main_con byIndustry" id="Industry">
 				<div class="tit">
 					<div>
 						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">By Industry</h4>
@@ -671,7 +695,7 @@
 			</div>
 
 			<!-- DT Insight -->
-			<div class="main_con">
+			<div class="main_con DTInsight" id="Insight">
 				<div class="tit">
 					<div>
 						<h4>DT Insight</h4>
@@ -724,7 +748,7 @@
 			</div>
 
 			<!-- Youtube -->
-			<div class="main_con video_con">
+			<div class="main_con video_con" id="video">
 				<div class="tit">
 					<div>
 						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Video Contents</h4>

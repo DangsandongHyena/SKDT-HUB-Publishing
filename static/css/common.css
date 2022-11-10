@@ -11,6 +11,7 @@ html, body{
 	height: 100%;
 	font-family:'Noto Sans KR', sans-serif;
 	color:var(--balck);
+	scroll-behavior: smooth;
 }
 input, select, button, textarea, a, strong{
 	font-family:'Noto Sans KR', sans-serif;
