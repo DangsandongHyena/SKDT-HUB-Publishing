@@ -1,0 +1,58 @@
+/* main */
+.main-section {
+	position:relative;
+	max-width: 1318px;
+	height:646px;
+	margin:0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.main-section .main_txt {
+	font-size:62px;
+	font-weight: 700;
+	line-height: 77px;
+    letter-spacing: -1px;
+}
+.main-section .btn_group {
+	margin-top: 64px;
+    display: flex;
+    align-items: center;
+}
+.main-section .btn_group > a {
+	width: 258px;
+	height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+	border: 2px solid #E8526E;
+    border-radius: 30px;
+	font-weight: 700;
+    color: #EA002C;
+}
+.main-section .btn_group > a:last-child {
+	margin-left:20px;
+	border:2px solid #FF8B3E;
+	color:#FF6600;
+}
+.main-section .btn_group > a > i {
+	display:inline-block;
+	width:24px;
+	height:24px;
+	margin:0 45px 0 42px;
+}
+.main-section .btn_group > a > i.ico_arrow_01 {
+	background:url(../images/ico_arrow_01.svg);
+}
+.main-section .btn_group > a > i.ico_arrow_02 {
+	background:url(../images/ico_arrow_02.svg);
+}
+
+
+@media(max-width:1920px){
+	
+}
+
+@media(max-width:1280px){
+
+}

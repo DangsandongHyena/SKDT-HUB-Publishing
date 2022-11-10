@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="64" height="64" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" y1="1" x2="0.5" y2="0.077" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ea002c"/>
+      <stop offset="0.639" stop-color="#ea002c"/>
+      <stop offset="1" stop-color="#ff7a00"/>
+    </linearGradient>
+  </defs>
+  <g id="상태-off" transform="translate(-1979.881 -983)">
+    <rect id="사각형_4" data-name="사각형 4" width="64" height="64" rx="32" transform="translate(1979.881 983)" fill="url(#linear-gradient)"/>
+    <g id="그룹_1135" data-name="그룹 1135" transform="translate(1990.881 994)">
+      <path id="패스_1084" data-name="패스 1084" d="M0,0H42V42H0Z" fill="none"/>
+      <line id="선_7" data-name="선 7" y2="24" transform="translate(21 9)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <line id="선_8" data-name="선 8" x2="24" transform="translate(9 21)" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

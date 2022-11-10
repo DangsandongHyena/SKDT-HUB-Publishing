@@ -1,0 +1,869 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<title>SK C&C DT Hub</title>
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+	<!-- 안드로이드 홈화면추가시 상단 주소창 제거 -->
+	<meta name="mobile-web-app-capable" content="yes">
+	<link rel="icon" type="image/png" sizes="16x16" href="../static/images/favicon.ico">
+	<!-- ios홈화면추가시 상단 주소창 제거 -->
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
+	<link rel="apple-touch-icon" href="/img/favicon.ico">
+	<link rel="stylesheet" href="../static/css/base.css">
+	<link rel="stylesheet" href="../static/css/common.css">
+	<link rel="stylesheet" href="../static/css/main.css">
+	<link rel="stylesheet" href="../static/css/mobile.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;500&display=swap" rel="stylesheet">
+
+	<script src="../static/js/jquery.min.js"></script>
+	<script src="../static/js/jquery-ui.min.js"></script>
+	<script src="../static/js/swiper.min.js"></script>
+	<script src="../static/js/common.js"></script>
+	<script src="../static/js/quick.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+
+	<!-- AOS 라이브러리 불러오기-->
+	<link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+	<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+			initHeaderGnb(); //Header GNB 
+			floatSticky(); //quick
+		});
+	</script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+	<script>
+		$(function () {
+			$("#tabs_roadmap").tabs();
+
+			$('.btn_more').click(function() {
+				$('.byIndustry_card').toggleClass('on');
+				$(this).toggleClass('on');
+			} );
+		});
+	</script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+
+</head>
+
+<body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
+	<div id="wrap" style="min-height:100%;">
+		<!-- header -->
+		<header id="header" class="on" style="transform: translateY(0px);">
+			<h1 class="logo"><a href="#none"><img src="../static/images/common/logo.svg" alt="SK C&C DT Hub"></a></h1>
+			<nav class="gnb">
+				<ul>
+					<li>
+						<a href="#none">About</a>
+						<div class="deps_navi">
+							<div class="gnb-sub-cont">
+								<h2 style="position: relative;">About</h2>
+								<ul class="sub-menu-list">
+									<li class="active"><a href="#none">SubNavi_01</a></li>
+									<li><a href="#none">SubNavi_02</a></li>
+									<li><a href="#none">SubNavi_03</a></li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<a href="#none">News</a>
+					</li>
+					<li>
+						<a href="#none">Partner</a>
+					</li>
+					<li>
+						<i class="bar"></i>
+					</li>
+					<li>
+						<a href="#none">AI/DATA</a>
+					</li>
+					<li>
+						<a href="#none">BLOCKCHAIN</a>
+					</li>
+					<li>
+						<a href="#none">CLOUD</a>
+					</li>
+					<li>
+						<a href="#none">산업별 솔루션</a>
+						<div class="deps_navi">
+							<div class="gnb-sub-cont">
+								<h2 style="position: relative;">산업별 솔루션</h2>
+								<ul class="sub-menu-list sub-menu-2depth">
+									<li>
+										<a href="#none">AI 어드바이저 <span>Market Caster</span></a>
+									</li>
+									<li>
+										<a href="#none">경연 <span>경연플랫폼</span></a>
+									</li>
+									<li>
+										<a href="#none">모바일앱 자동화 테스트 <span>mTworks</span></a>
+									</li>
+									<li>
+										<a href="#none">지능형 건강관리 <span>KeepWell</span></a>
+									</li>
+									<li>
+										<a href="#none">비즈니스 인텔리전스 <span>Tableau</span></a>
+									</li>
+									<li>
+										<a href="#none">DT 진단/컨설팅 <span>Digital Doctor</span></a>
+									</li>
+									<li>
+										<a href="#none">제조 포탈 <span>I-FACTs Hub</span></a>
+									</li>
+									<li>
+										<a href="#none">제조 실행 <span>I-FACTs MES / SPC / FDC / RMS</span></a>
+									</li>
+									<li>
+										<a href="#none">설비 제어 <span>I-FACTs EAP / HMI / MCS</span></a>
+									</li>
+									<li>
+										<a href="#none">환경ㆍ안전ㆍ설비자산 <span>I-FACTs ESG solution / EAM(OCEAN-H)</span></a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li>
+						<i class="bar"></i>
+					</li>
+					<li>
+						<a href="#none">Use Case</a>
+					</li>
+					<li>
+						<a href="#none">Sales Pack</a>
+					</li>
+					<li>
+						<a href="#none">Trial</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="header-utill">
+				<a href="#none"><i class="ico_search"></i></a>
+				<a href="#none"><i class="ico_navi"></i></a>
+			</div>
+		</header>
+		<div id="bg_modal" style="opacity: 0.6; display: none;"></div>
+
+		<!-- 2depth nav -->
+		<div class="nav_2dp"></div>
+		<!-- //header -->
+
+		<!-- main visual -->
+		<div class="main_visual_area">
+			<div class="main_visual">
+				<div class="swiper MainSlider ">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<!-- slide item -->
+							<div class="slide_img"
+								style="background:url(../static/images/main/slide/img_01.png) center no-repeat; background-size:cover;">
+								<div class="img_txt">
+									<div class="txt01"><img src="../static/images/main/slide/img_01_01.png"></div>
+									<div class="txt02"><img src="../static/images/main/slide/img_01_02.png"></div>
+									<div class="txt03"><img src="../static/images/main/slide/img_01_03.png"></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<!-- slide item -->
+							<div class="slide_img"
+								style="background:url(../static/images/main/slide/img_01.png) center no-repeat; background-size:cover;">
+								<div class="img_txt">
+									<div class="txt01"><img src="../static/images/main/slide/img_01_01.png"></div>
+									<div class="txt02"><img src="../static/images/main/slide/img_01_02.png"></div>
+									<div class="txt03"><img src="../static/images/main/slide/img_01_03.png"></div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<!-- slide item -->
+							<div class="slide_img"
+								style="background:url(../static/images/main/slide/img_01.png) center no-repeat; background-size:cover;">
+								<div class="img_txt">
+									<div class="txt01"><img src="../static/images/main/slide/img_01_01.png"></div>
+									<div class="txt02"><img src="../static/images/main/slide/img_01_02.png"></div>
+									<div class="txt03"><img src="../static/images/main/slide/img_01_03.png"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-pagination"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- container -->
+		<div id="container" class="container main">
+			<!-- left nav -->
+			<div class="left_nav">
+				<ul>
+					<li><a href="#none">MAIN</a></li>
+					<li><a href="#none">SOLUTION ROADMAP</a></li>
+					<li><a href="#none">BY INDUSTRY</a></li>
+					<li><a href="#none">DT INSIGHT</a></li>
+					<li><a href="#none">VIDEO CONTENTS</a></li>
+				</ul>
+			</div>
+
+			<!-- Solution Roadmap -->
+			<div class="main_con">
+				<div class="tit">
+					<div>
+						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Solution Roadmap</h4>
+						<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">SK 주식회사 C&C Digital 혁신 기술의 모든
+							것, 디지털 전환에 필요한 A to Z 기술이 담겨있습니다.</p>
+					</div>
+					<div>
+						<a href="#none" class="btn_loadmap" data-aos="fade-up" data-aos-duration="700"
+							data-aos-delay="700"><i class="ico_info"></i>Digital Product Map</a>
+					</div>
+				</div>
+				<div class="con_area">
+					<div id="tabs_roadmap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+						<ul class="tabs_btn">
+							<li><a href="#roadmap-1">
+									<p>AI/DATA</p>
+								</a></li>
+							<li><a href="#roadmap-2">
+									<p>BLOCKCHAIN</p>
+								</a></li>
+							<li><a href="#roadmap-3">
+									<p>CLOUD</p>
+								</a></li>
+							<li><a href="#roadmap-4">
+									<p>산업별 솔루션</p>
+								</a></li>
+						</ul>
+						<div id="roadmap-1">
+							<img src="../static/images/main/view.png">
+							<ul>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img01_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img01_on.png" class="ico_on">
+										<div>
+											<p>AI Data 통합 플랫폼</p>
+											<span>Accu.Fabric Suite</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img02_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img02_on.png" class="ico_on">
+										<div>
+											<p>AI 분석 플랫폼</p>
+											<span>Accu.Insight</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img03_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img03_on.png" class="ico_on">
+										<div>
+											<p>AutoML</p>
+											<span>Accu.Tuning</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img04_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img04_on.png" class="ico_on">
+										<div>
+											<p>AI 컨택센터</p>
+											<span>Accu.AICC</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img05_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img05_on.png" class="ico_on">
+										<div>
+											<p>AI 텍스트 분석</p>
+											<span>Accu.TA</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img06_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img06_on.png" class="ico_on">
+										<div>
+											<p>AI 챗봇</p>
+											<span>Accu.Chatbot</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img07_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img07_on.png" class="ico_on">
+										<div>
+											<p>AI 비전</p>
+											<span>Accu.Vision</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img08_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img08_on.png" class="ico_on">
+										<div>
+											<p>데이터 큐레이션</p>
+											<span>Accu.Rator</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img09_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img09_on.png" class="ico_on">
+										<div>
+											<p>데이터 레이크</p>
+											<span>Accu.Lake</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img10_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img10_on.png" class="ico_on">
+										<div>
+											<p>지식 그래프</p>
+											<span>Accu.Ontology</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div id="roadmap-2">
+							<img src="../static/images/main/view.png">
+							<ul>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img01_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img01_on.png" class="ico_on">
+										<div>
+											<p>AI Data 통합 플랫폼</p>
+											<span>Accu.Fabric Suite</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img02_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img02_on.png" class="ico_on">
+										<div>
+											<p>AI 분석 플랫폼</p>
+											<span>Accu.Insight</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div id="roadmap-3">
+							<img src="../static/images/main/view.png">
+							<ul>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img01_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img01_on.png" class="ico_on">
+										<div>
+											<p>AI Data 통합 플랫폼</p>
+											<span>Accu.Fabric Suite</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img02_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img02_on.png" class="ico_on">
+										<div>
+											<p>AI 분석 플랫폼</p>
+											<span>Accu.Insight</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img03_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img03_on.png" class="ico_on">
+										<div>
+											<p>AutoML</p>
+											<span>Accu.Tuning</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img04_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img04_on.png" class="ico_on">
+										<div>
+											<p>AI 컨택센터</p>
+											<span>Accu.AICC</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img05_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img05_on.png" class="ico_on">
+										<div>
+											<p>AI 텍스트 분석</p>
+											<span>Accu.TA</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img06_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img06_on.png" class="ico_on">
+										<div>
+											<p>AI 챗봇</p>
+											<span>Accu.Chatbot</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<div id="roadmap-4">
+							<img src="../static/images/main/view.png">
+							<ul>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img01_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img01_on.png" class="ico_on">
+										<div>
+											<p>AI Data 통합 플랫폼</p>
+											<span>Accu.Fabric Suite</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img02_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img02_on.png" class="ico_on">
+										<div>
+											<p>AI 분석 플랫폼</p>
+											<span>Accu.Insight</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img03_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img03_on.png" class="ico_on">
+										<div>
+											<p>AutoML</p>
+											<span>Accu.Tuning</span>
+										</div>
+									</a>
+								</li>
+								<li>
+									<a href="#none">
+										<img src="../static/images/main/ico_ai_img04_off.png" class="ico_off">
+										<img src="../static/images/main/ico_ai_img04_on.png" class="ico_on">
+										<div>
+											<p>AI 컨택센터</p>
+											<span>Accu.AICC</span>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Digital혁신 -->
+			<div class="main_digital_area">
+				<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Digital 혁신을 Leading 합니다</h4>
+				<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100"><span>Total Digital Transformation partner로서 </span>
+					<span>SK DT HUB가 미래를 제시합니다.</span>
+				</p>
+			</div>
+
+			<!-- By Industry -->
+			<div class="main_con byIndustry">
+				<div class="tit">
+					<div>
+						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">By Industry</h4>
+						<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">각 산업별 다양한 고객사의 Business Value를 높히기 위해 기획에서부터 분석, 실행까지 DT의 전 과정을 함께합니다.</p>
+					</div>
+					<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+						<a href="#none" class="btn_byIndustry">자세히 보기</a>
+					</div>
+				</div>
+				<div class="con_area">
+					<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+						<ul>
+							<li class="byIndustry_01">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Finance</h5>
+										<p class="desc">금융 분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Finance</h5>
+										<p class="desc">금융 분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img01.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_02">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>커머스</h5>
+										<p class="desc">커머스 도입 성공 사례</p>
+									</div>
+									<div class="tit_hover">
+										<h5>커머스</h5>
+										<p class="desc">커머스 도입 성공 사례</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img02.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_03">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Information Technologies</h5>
+										<p class="desc">IT 산업분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Information Technologies</h5>
+										<p class="desc">IT 산업분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img03.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_04">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Manufacture</h5>
+										<p class="desc">제조 산업분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Manufacture</h5>
+										<p class="desc">제조 산업분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img04.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_05">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Construction</h5>
+										<p class="desc">건설 분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Construction</h5>
+										<p class="desc">건설 분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img05.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_06">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Public</h5>
+										<p class="desc">공공 분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Public</h5>
+										<p class="desc">공공 분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img06.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_04 byIndustry_card">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Manufacture</h5>
+										<p class="desc">제조 산업분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Manufacture</h5>
+										<p class="desc">제조 산업분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img04.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_05 byIndustry_card">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Construction</h5>
+										<p class="desc">건설 분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Construction</h5>
+										<p class="desc">건설 분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img05.png">
+									</div>
+								</a>
+							</li>
+							<li class="byIndustry_06 byIndustry_card">
+								<a href="#none">
+									<div class="tit">
+										<p class="case">case</p>
+										<h5>Public</h5>
+										<p class="desc">공공 분야</p>
+									</div>
+									<div class="tit_hover">
+										<h5>Public</h5>
+										<p class="desc">공공 분야</p>
+										<p class="view">자세히 보기</p>
+									</div>
+									<div class="imgBg">
+										<img src="../static/images/main/ByIndustry_img06.png">
+									</div>
+								</a>
+							</li>
+						</ul>
+						<a href="#none" class="btn_more">더보기</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- DT Insight -->
+			<div class="main_con">
+				<div class="tit">
+					<div>
+						<h4>DT Insight</h4>
+						<p>디지털 전환과 관련된 최신의 정보와 비즈니스 인사이트를 제공합니다.</p>
+					</div>
+					<div class="Insight_slide_btn">
+						<div class="Insight_slide-next"></div>
+						<div class="Insight_slide-prev"></div>
+					</div>
+				</div>
+				<div class="con_area Insight_slide">
+					<div class="swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<img src="../static/images/main/img_Insight_01.png">
+								<p>가트너 선정 2023 전략 기술 트렌드</p>
+								<p>2022. 10. 01</p>
+								<h4>업계에서 가장 큰 영향력을 가진 리서치 그룹 Gartner가
+									최근 2023년 전략 기술 트렌드를 발표했습니다. </h4>
+								<a href="#none">자세히 보기</a></li>
+							</div>
+							<div class="swiper-slide">
+								<img src="../static/images/main/img_Insight_02.png">
+								<p>가트너 선정 2023 전략 기술 트렌드</p>
+								<p>2022. 10. 01</p>
+								<h4>업계에서 가장 큰 영향력을 가진 리서치 그룹 Gartner가
+									최근 2023년 전략 기술 트렌드를 발표했습니다. </h4>
+								<a href="#none">자세히 보기</a></li>
+							</div>
+							<div class="swiper-slide">
+								<img src="../static/images/main/img_Insight_03.png">
+								<p>심플하게 짚어보는 2022 모바일 앱 트렌드</p>
+								<p>2022. 09. 15</p>
+								<h4>©Apple 글로벌 빅테크 기업 애플의 새로운 스마트폰이 정식
+									출시되면서 특히 화제가 되었던 부분이 있습니다. </h4>
+								<a href="#none">자세히 보기</a></li>
+							</div>
+							<div class="swiper-slide">
+								<img src="../static/images/main/img_Insight_04.png">
+								<p>DT INSIGHT를 위한 기획 인터뷰</p>
+								<p>2022. 09. 11</p>
+								<h4>“금융은 DT 이렇게 합니다!” DT Pioneer
+									NH투자증권 빅데이터센터 차장 송기보 님 인터뷰</h4>
+								<a href="#none">자세히 보기</a></li>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+
+			<!-- Youtube -->
+			<div class="main_con video_con">
+				<div class="tit">
+					<div>
+						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Video Contents</h4>
+						<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">다양한 이야기가 넘치는 유튜브 SK DT Channel 로<br>
+							여려분을 초대합니다. </p>
+					</div>
+					<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+						<a href="#none" class="btn_youtube"><i class="ico_sk"></i>SK DT Channel</a>
+					</div>
+					<div class="video_slide_btn"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="900">
+						<div class="video_slide-next"></div>
+						<div class="video_slide-prev"></div>
+					</div>
+				</div>
+				<div class="con_area">
+					<div class="swiper video_slide"  data-aos="fade-up" data-aos-duration="700" data-aos-delay="700">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../static/images/main/youtube_01.png">
+									<p>2022. 10. 01</p>
+									<h5>2022 SK TECH SUMMIT 안내</h5>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../static/images/main/youtube_02.png">
+									<p>2022. 10. 01</p>
+									<h5>2022 SK TECH SUMMIT 안내</h5>
+								</a>
+							</div>
+							<div class="swiper-slide">
+								<a href="">
+									<img src="../static/images/main/youtube_03.png">
+									<p>2022. 10. 01</p>
+									<h5>2022 SK TECH SUMMIT 안내</h5>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- 회사소개 -->
+			<div class="cs">
+				<div>
+					<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">오늘의 기술로 내일을 만들고<br>
+						내일의 기술로 미래를 꿈꿉니다</p>
+					<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">SK DT HUB가 함께 미래를 꿈꿉니다</h4>
+					<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="500"><a href="#none">문의하기</a></div>
+				</div>
+			</div>
+
+			<!-- 퀵 메뉴 -->
+			<div id="floatingSticky" class="floating-sticky" style="margin-bottom: 0px;">
+				<div class="menu-list">
+					<div class="inner ui-draggable ui-draggable-handle" style="left: 0px; top: 0px;">
+						<a href="#none" class="btn-floating" onclick="floating_open();"><span>메뉴보기</span></a>
+						<ul>
+							<li class="menu01" aria-hidden="">
+								<a href="#none" class="button-child">
+									<p class="btn_quick_txt"><span>DOWNLOAD </span>SALESPACK </p>
+								</a>
+							</li>
+							<li class="menu02" aria-hidden="false">
+								<a href="#none" class="button-child">
+									<p class="btn_quick_txt"><span>DOWNLOAD </span>SALESPACK </p>
+								</a>
+							</li>
+							<li class="menu03" aria-hidden="false">
+								<a href="#none" class="button-child">
+									<p class="btn_quick_txt"><span>DOWNLOAD </span>SALESPACK </p>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<button type="button" class="btn-gotop"></button>
+			</div>
+			<!-- //퀵 메뉴 -->
+
+		</div>
+		<!-- //container -->
+
+		<!-- footer -->
+		<footer id="footer">
+			<div class="footer_con">
+				<div class="info">
+					<p>SK(주) C&C</p>
+					<ul>
+						<li>대표이사 : 최태원, 장동현, 박성하</li>
+						<li>사업자 등록번호 : 783-85-00169</li>
+						<li>주소 : 경기도 성남시 분당구 성남대로 343번길 9</li>
+						<li>Digital플랫폼GTM그룹</li>
+						<li>e-mail : dtmarketing@sk.com</li>
+					</ul>
+				</div>
+				<p class="copy">Copyright ⓒ 2022 By SK INC CO.,LTD. All Rights Reserved.</p>
+			</div>
+		</footer>
+		<!-- //footer -->
+
+	</div>
+	
+	<script>
+		var swiper = new Swiper(".MainSlider", {
+			effect: "fade",
+			pagination: {
+				el: ".swiper-pagination",
+				clickable: true,
+			},
+		});
+
+		var swiper = new Swiper(".Insight_slide > .swiper", {
+			slidesPerView: "auto",
+			spaceBetween: 30,
+			loop: true,
+			navigation: {
+				nextEl: ".Insight_slide-next",
+				prevEl: ".Insight_slide-prev",
+			},
+		});
+
+		var swiper = new Swiper(".video_slide", {
+			slidesPerView: "auto",
+			spaceBetween: 30,
+			navigation: {
+				nextEl: ".video_slide-next",
+				prevEl: ".video_slide-prev",
+			},
+		});
+	</script>
+
+	<!-- AOS 스크립트 초기화 -->
+	<script>
+		AOS.init(); 
+		window.addEventListener('load', AOS.refresh)
+	</script>
+	<!-- //AOS 스크립트 초기화 -->
+</body>
+
+</html>
