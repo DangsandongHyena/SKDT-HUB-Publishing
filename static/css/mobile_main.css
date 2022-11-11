@@ -1,4 +1,33 @@
-@media(max-width:768px){/* 모바일 시작*/
+@media(max-width:768px){/* 모바일 main 시작*/
+	#wrap {
+		min-width: unset;
+	}
+	.left_nav {
+		display: none;
+	}
+	.floating-sticky {
+		display: none;
+	}
+
+	/* 메인 비주얼 */
+	.main_visual .img_txt>.txt01 {
+		margin-bottom: 27px;
+	}
+	.main_visual .swiper-slide-active .txt01 > img {
+		width: 75px;
+	}
+	.main_visual .img_txt>.txt02 {
+		margin-bottom: 29px;
+	}
+	.main_visual .img_txt>.txt02 > img {
+		width:259px;
+	}
+	.main_visual .img_txt>.txt03 > img {
+		width: 225px;
+	}
+
+
+
 
 
 }
