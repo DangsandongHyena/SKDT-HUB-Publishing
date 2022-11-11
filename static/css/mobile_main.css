@@ -26,6 +26,12 @@
 		width: 225px;
 	}
 
+	.main_con>.tit {
+		align-items: flex-start;
+		flex-direction: column;
+		padding: 0 20px;
+	}
+
 
 
 
