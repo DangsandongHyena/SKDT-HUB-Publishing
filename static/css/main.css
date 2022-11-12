@@ -160,6 +160,7 @@ header#header nav.gnb.hide {
 	width:20px;
 	height:20px;
 	background:url(../images/common/ico_info.svg) center no-repeat;
+	background-size: contain;
 	margin-right:10px;
 }
 .main_con > .tit a:after {
@@ -376,8 +377,10 @@ header#header nav.gnb.hide {
 	margin:11px;
 }
 .main_con.byIndustry .con_area a {
+	display: block;
 	width:417px;
 	height:425px;
+	background-color: #fff;
 	border-radius: 17px;
 	position: relative;
 	overflow: hidden;
@@ -466,6 +469,7 @@ header#header nav.gnb.hide {
 	height:16px;
 	margin-right:10px;
 	background: url(../images/main/ico_glasses.svg) center no-repeat;
+	background-size: 100%;
 }
 .main_con.byIndustry .con_area .btn_more {
 	display: inline-block;
@@ -574,6 +578,7 @@ header#header nav.gnb.hide {
 }
 .Insight_slide .swiper-slide > img {
 	margin-bottom:20px;
+	width:100%;
 }
 .Insight_slide .swiper-slide > p {
 	font-size:17px;
