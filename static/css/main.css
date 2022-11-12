@@ -116,6 +116,12 @@ header#header nav.gnb.hide {
 	background-color:red;
 	transition:all 0.3s;
 }
+.left_nav > ul > li > a.active {
+	color:red;
+}
+.left_nav > ul > li > a.active:before {
+	background-color:red;
+}
 
 /* 메인 컨텐츠 영역 */
 .main_con {
@@ -762,6 +768,7 @@ header#header nav.gnb.hide {
 .cs {
 	height:1087px;
 	background: url(../images/main/img_cs.png) no-repeat;
+	background-size: cover;
 	display: flex;
 	align-items: center;
 	justify-content: center;

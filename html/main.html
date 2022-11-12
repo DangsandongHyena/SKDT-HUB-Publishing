@@ -65,16 +65,7 @@
 	</script>
 	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-	<script>
-		$(function () {
-			$("#tabs_roadmap").tabs();
-
-			$('.btn_more').click(function() {
-				$('.byIndustry_card').toggleClass('on');
-				$(this).toggleClass('on');
-			} );
-		});
-	</script>
+	
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
@@ -872,14 +863,36 @@
 			},
 		});
 
-		var swiper = new Swiper(".video_slide", {
-			slidesPerView: "auto",
-			spaceBetween: 30,
-			navigation: {
-				nextEl: ".video_slide-next",
-				prevEl: ".video_slide-prev",
-			},
+		var ww = $(window).width();
+		if (ww > 768) {
+			mySwiper = new Swiper(".video_slide", {
+				slidesPerView: "auto",
+				spaceBetween: 30,
+				navigation: {
+					nextEl: ".video_slide-next",
+					prevEl: ".video_slide-prev",
+				},
+			});
+		} else if (ww <= 768) {
+		// swiper 호출 안함
+		}
+	</script>
+	<script>
+		// left nav 버튼
+		$(".left_nav a").on("click", function() {
+			$(".left_nav").find(".active").removeClass("active");
+			$(this).addClass("active");
 		});
+
+		// SOLUTION ROADMAP 탭
+		$("#tabs_roadmap").tabs();
+		
+		// BY INDUSTRY 더보기
+		$('.btn_more').click(function() {
+			$('.byIndustry_card').toggleClass('on');
+			$(this).toggleClass('on');
+		} );
+		
 	</script>
 
 	<!-- AOS 스크립트 초기화 -->

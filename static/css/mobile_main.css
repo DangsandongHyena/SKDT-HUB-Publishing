@@ -245,6 +245,16 @@
 	.video_con .con_area {
 		margin-top:0;
 	}
+	.video_con .swiper {
+		padding:0 20px;
+	}
+	.video_con .swiper-wrapper {
+		flex-direction: column;
+	}
+	.video_con .swiper-slide {
+		width:100%;
+		margin-bottom:20px;
+	}
 	.video_con .swiper-slide a > img {
 		width:100%;
 	}
@@ -256,7 +266,31 @@
 		font-size:14px;
 	}
 
-	/**/
+	/* cs */
+	.cs {
+		height:360px;
+	}
+	.cs > div {
+		transform: translate(0, 0);
+    	text-align: right;
+	}
+	.cs p {
+		font-size: 14px;
+	}
+	.cs h4 {
+		margin-top: 10px;
+		font-size:20px;
+	}
+	.cs a {
+		padding: 12px 33px;
+		margin-top: 20px;
+		font-size: 12px;
+		border: 2px solid #fff;
+	}
+	.cs a:after { 
+		width: 8px;
+    	height: 8px;
+	}
 
 	/**/
 
