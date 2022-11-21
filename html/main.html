@@ -36,27 +36,7 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			// 타이틀 상단 고정
-			$(window).scroll(function () {
-				var scroll = $(window).scrollTop();
-				var sub1_top = $('.byIndustry').offset().top;
-				var sub2_top = $('.DTInsight').offset().top - 5;
-				
-				if(scroll < sub1_top - 0){
-					$('.byIndustry .tit').removeClass('fixed');
-					$('nav.gnb').removeClass('hide');
-				} else if(scroll > sub1_top - 0){
-					$('.byIndustry .tit').addClass('fixed');
-					$('nav.gnb').addClass('hide');
-				}
-
-				if(scroll < sub2_top){
-					$('.DTInsight .tit').removeClass('fixed');
-				} else if(scroll > sub2_top){
-					$('.byIndustry .tit').removeClass('fixed');
-					$('.DTInsight .tit').addClass('fixed');
-				}
-			});
+			
 
 			smoothScroll();
 			initHeaderGnb(); //Header GNB 
@@ -234,14 +214,16 @@
 			<!-- Solution Roadmap -->
 			<div class="main_con" id="solution">
 				<div class="tit">
-					<div>
-						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Solution Roadmap</h4>
-						<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">SK 주식회사 C&C Digital 혁신 기술의 모든
-							것, 디지털 전환에 필요한 A to Z 기술이 담겨있습니다.</p>
-					</div>
-					<div>
-						<a href="#none" class="btn_loadmap" data-aos="fade-up" data-aos-duration="700"
-							data-aos-delay="700"><i class="ico_info"></i>Digital Product Map</a>
+					<div class="tit_inner">
+						<div>
+							<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">Solution Roadmap</h4>
+							<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">SK 주식회사 C&C Digital 혁신 기술의 모든
+								것, 디지털 전환에 필요한 A to Z 기술이 담겨있습니다.</p>
+						</div>
+						<div>
+							<a href="#none" class="btn_loadmap" data-aos="fade-up" data-aos-duration="700"
+								data-aos-delay="700"><i class="ico_info"></i>Digital Product Map</a>
+						</div>
 					</div>
 				</div>
 				<div class="con_area">
@@ -515,12 +497,14 @@
 			<!-- By Industry -->
 			<div class="main_con byIndustry" id="Industry">
 				<div class="tit">
-					<div>
-						<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">By Industry</h4>
-						<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">각 산업별 다양한 고객사의 Business Value를 높히기 위해 기획에서부터 분석, 실행까지 DT의 전 과정을 함께합니다.</p>
-					</div>
-					<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
-						<a href="#none" class="btn_byIndustry">자세히 보기</a>
+					<div class="tit_inner">
+						<div>
+							<h4 data-aos="fade-up" data-aos-duration="700" data-aos-delay="0">By Industry</h4>
+							<p data-aos="fade-up" data-aos-duration="700" data-aos-delay="100">각 산업별 다양한 고객사의 Business Value를 높히기 위해 기획에서부터 분석, 실행까지 DT의 전 과정을 함께합니다.</p>
+						</div>
+						<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
+							<a href="#none" class="btn_byIndustry">자세히 보기</a>
+						</div>
 					</div>
 				</div>
 				<div class="con_area">
@@ -688,13 +672,15 @@
 			<!-- DT Insight -->
 			<div class="main_con DTInsight" id="Insight">
 				<div class="tit">
-					<div>
-						<h4>DT Insight</h4>
-						<p>디지털 전환과 관련된 최신의 정보와 비즈니스 인사이트를 제공합니다.</p>
-					</div>
-					<div class="Insight_slide_btn">
-						<div class="Insight_slide-next"></div>
-						<div class="Insight_slide-prev"></div>
+					<div class="tit_inner">
+						<div>
+							<h4>DT Insight</h4>
+							<p>디지털 전환과 관련된 최신의 정보와 비즈니스 인사이트를 제공합니다.</p>
+						</div>
+						<div class="Insight_slide_btn">
+							<div class="Insight_slide-next"></div>
+							<div class="Insight_slide-prev"></div>
+						</div>
 					</div>
 				</div>
 				<div class="con_area Insight_slide">
@@ -879,9 +865,66 @@
 	</script>
 	<script>
 		// left nav 버튼
-		$(".left_nav a").on("click", function() {
-			$(".left_nav").find(".active").removeClass("active");
-			$(this).addClass("active");
+		var sections = $(".main_con"),
+		nav = $(".left_nav"),
+		nav_height = nav.outerHeight();
+
+		$(window).on("scroll", function () {
+			var cur_pos = $(this).scrollTop();
+
+			sections.each(function () {
+				var top = $(this).offset().top - nav_height,
+				bottom = top + $(this).outerHeight();
+
+				if (cur_pos >= top && cur_pos <= bottom) {
+				nav.find("a").removeClass("active");
+				sections.removeClass("active");
+
+				$(this).addClass("active");
+				nav.find('a[href="#' + $(this).attr("id") + '"]').addClass("active");
+				}
+			});
+			});
+
+			nav.find("a").on("click", function () {
+			var $el = $(this),
+				id = $el.attr("href");
+
+			$("html, body").animate(
+				{
+				scrollTop: $(id).offset().top - nav_height
+				},
+				50
+			);
+			return false;
+		});
+
+		// 타이틀 상단 고정
+		$(window).scroll(function () {
+			var scroll = $(window).scrollTop();
+			var sub1_top = $('#solution').offset().top;
+			var sub2_top = $('.byIndustry').offset().top;
+			var sub3_top = $('.DTInsight').offset().top;
+			
+			if(scroll < sub1_top + 50){
+				$('#solution').removeClass('fixed');
+			} else if(scroll > sub1_top - 0){
+				$('#solution').addClass('fixed');
+			}
+			
+			if(scroll < sub2_top + 50){
+				$('.byIndustry').removeClass('fixed');
+			} else if(scroll > sub2_top - 0){
+				$('#solution').removeClass('fixed');
+				$('.byIndustry').addClass('fixed');
+			}
+
+			if(scroll < sub3_top - 0){
+				$('.DTInsight').removeClass('fixed');
+			} else if(scroll > sub3_top){
+				$('.byIndustry').removeClass('fixed');
+				$('.DTInsight').addClass('fixed');
+			}
 		});
 
 		// SOLUTION ROADMAP 탭

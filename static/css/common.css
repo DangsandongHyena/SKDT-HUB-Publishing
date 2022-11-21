@@ -51,14 +51,14 @@ header#header {
 	background:#fff;
     border-bottom:1px solid var(--light-gray);
     transition: 0.3s ease border-bottom-color,0.3s ease background-color,0.3s ease transform;
-	z-index: 99;
+	z-index: 999999;
 }
 header#header.gnb_open {
     border-bottom-color: #DDDDDD;
     background-color: white;
 }
 header#header.gnb_open {
-    z-index: 9999 !important;
+    z-index: 999999 !important;
 }
 
 header#header nav.gnb {
@@ -187,6 +187,7 @@ nav.gnb > ul > li > .deps_navi {
     width: 100%;
     height: 100%;
     background-color: #020A0A;
+	z-index: 99999;
 }
 
 /* 2depth 메뉴 */
@@ -295,7 +296,7 @@ nav.gnb > ul > li > .deps_navi {
 	top:50px;
 }
 .ui-tabs-nav {
-	border-left:1px solid #E2E2E2;
+	/* border-left:1px solid #E2E2E2; */
 }
 .tab-btns .ui-tabs-nav {
 	max-width: 1318px;
