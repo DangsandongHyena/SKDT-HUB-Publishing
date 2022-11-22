@@ -1,6 +1,91 @@
-@media(max-width:768px){/* 모바일 시작*/
+@media(min-width:1591px){
+	/* 타이틀 고정 */
+	#solution.fixed > .tit > .tit_inner {
+		position: fixed;
+		top:0px;
+		width: inherit;
+		max-width: inherit;
+		padding: 23px 0;
+		z-index: 999999;
+		transition: all 0.5s;
+	}
+	#solution.fixed > .tit > .tit_inner h4 {
+		font-size: 32px;
+		text-transform: uppercase;
+		letter-spacing: -1px;
+	}
+	#solution.fixed > .tit > .tit_inner p {
+		font-size: 18px;
+		color: #535353;
+		letter-spacing: -1px;
+		margin-top:8px;
+	}
+	
+	/* 타이틀 고정 */
+	.byIndustry.fixed > .tit > .tit_inner {
+		position: fixed;
+		top:0px;
+		width: inherit;
+		max-width: inherit;
+		padding: 23px 0;
+		z-index: 999999;
+		transition: all 0.5s;
+	}
+	.byIndustry.fixed > .tit > .tit_inner h4 {
+		font-size: 32px;
+		text-transform: uppercase;
+		letter-spacing: -1px;
+	}
+	.byIndustry.fixed > .tit > .tit_inner p {
+		font-size: 18px;
+		color: #535353;
+		letter-spacing: -1px;
+		margin-top:8px;
+	}
+
+	/* 타이틀 고정 */
+	.DTInsight.fixed .tit > .tit_inner {
+		position: fixed;
+		top:0px;
+		width: inherit;
+		max-width: inherit;
+		padding: 23px 0;
+		z-index: 999999;
+		transition: all 0.5s;
+	}
+	.DTInsight.fixed > .tit > .tit_inner h4 {
+		font-size: 32px;
+		text-transform: uppercase;
+		letter-spacing: -1px;
+	}
+	.DTInsight.fixed > .tit > .tit_inner p {
+		font-size: 18px;
+		color: #535353;
+		letter-spacing: -1px;
+		margin-top:8px;
+	}
+}
+
+@media(max-width:1590px){/* 웹 화면 최소 */
+	
+	header#header nav.gnb > ul > li > a {
+		padding: 35px 10px;
+	}
+	header#header nav.gnb > ul > li > i.bar {
+		margin:0 10px;
+	}
+	.main_con > .tit > .tit_inner h4 {
+		font-size: 30px;
+	}
+	.main_con > .tit > .tit_inner p {
+		font-size: 16px;
+	}
+}
+@media(max-width:1318px){/* 모바일 시작*/
 	header#header {
+		height:58px;
 		padding:6px 15px;
+		transition: all 0.5s;
 	}
 	header#header nav.gnb {
 		display: none;
@@ -143,7 +228,38 @@
 		margin-top: 20px;
 	}
 
+	.main_digital_area {
+		height: 400px;
+	}
+	.main_digital_area > h4 {
+		font-size: 24px;
+	}
+	.main_digital_area > p {
+		font-size: 18px;
+	}
 
+	.video_con .tit h4 {
+		font-size: 32px;
+	}
+	.video_con .tit p {
+		font-size: 18px;
+	}
 
+	.cs {
+		height:700px;
+	}
+	.cs p {
+		font-size: 18px;
+	}
+	.cs h4 {
+		margin-top: 20px;
+		font-size: 24px;
+	}
+	.cs a {
+		display: inline-block;
+		padding: 16px 40px;
+		margin-top: 50px;
+		font-size: 16px;
+	}
 
 }

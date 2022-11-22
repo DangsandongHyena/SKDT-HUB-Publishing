@@ -1,3 +1,14 @@
+@media(max-width:1590px){/* 웹 화면 최소 */
+	#tabs_roadmap .ui-tabs-panel {
+		flex-direction: column;
+	}
+	#tabs_roadmap .ui-tabs-panel > img {
+		width:100%;
+	}
+	#tabs_roadmap .ui-tabs-panel > ul {
+		align-items: stretch;
+	}
+}
 @media(max-width:768px){/* 모바일 main 시작*/
 	#wrap {
 		min-width: unset;
@@ -73,15 +84,7 @@
 		padding: 17px 15px;
 	}
 
-	#tabs_roadmap .ui-tabs-panel {
-		flex-direction: column;
-	}
-	#tabs_roadmap .ui-tabs-panel > img {
-		width:100%;
-	}
-	#tabs_roadmap .ui-tabs-panel > ul {
-		align-items: stretch;
-	}
+	
 	#tabs_roadmap .ui-tabs-panel > ul > li {
 		width: 50%;
 	}

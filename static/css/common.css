@@ -32,7 +32,6 @@ table{width:100%;}
 	display:flex;
 	flex-direction: column;
 	width: 100%;
-	min-width: 1890px;
 	height:100%;
 	position: relative;
 	scroll-behavior: smooth;
@@ -43,15 +42,21 @@ table{width:100%;}
 header#header {
 	display:flex;
 	align-items: center;
-	justify-content: space-between;
+	justify-content: center;
 
 	width:100%;
+	height:auto;
 	margin:0 auto;
 	padding:0 30px;
 	background:#fff;
     border-bottom:1px solid var(--light-gray);
     transition: 0.3s ease border-bottom-color,0.3s ease background-color,0.3s ease transform;
 	z-index: 999999;
+	transition: all 0.5s;
+}
+header#header h1.logo {
+	position:absolute;
+	left:30px;
 }
 header#header.gnb_open {
     border-bottom-color: #DDDDDD;
@@ -70,6 +75,7 @@ header#header nav.gnb {
 }
 header#header nav.gnb ul {
     display: flex;
+	margin-left: 70px;
 }
 header#header nav.gnb > ul > li {
     display: flex;
@@ -82,12 +88,14 @@ header#header nav.gnb > ul > li > a {
 	font-size: 18px;
     line-height: 1;
 	white-space: normal;
+	transition: all 0.5s;
 }
 header#header nav.gnb > ul > li > i.bar {
 	width:1px;
 	height:12px;
 	margin:0 20px;
 	background-color: #919191;
+	transition: all 0.5s;
 }
 /* 네비 밑줄 */
 nav.gnb > ul > li > a:after {
@@ -127,7 +135,7 @@ nav.gnb > ul > li > .deps_navi {
     align-items: flex-start;
     justify-content: flex-start;
 	margin: 0 auto;
-    transform: translateX(23px);
+    transform: translateX(70px);
 }
 .gnb-sub-cont > h2 {
     width: 260px;
@@ -247,6 +255,8 @@ nav.gnb > ul > li > .deps_navi {
 }
 
 .header-utill {
+	position:absolute;
+	right:30px;
 	padding-top: 17px;
 	white-space: nowrap;
 }
@@ -255,6 +265,9 @@ nav.gnb > ul > li > .deps_navi {
 	width: 28px;
     height: 28px;
     display: inline-block;
+}
+.header-utill > a:first-child {
+	margin-left:0;
 }
 .header-utill .ico_search {
 	display:inline-block;

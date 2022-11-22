@@ -130,7 +130,7 @@ header#header nav.gnb.hide {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding:0 0 150px 0;
+	padding:0 20px 150px;
 }
 .main_con > .tit {
 	padding:160px 0 70px 0;
@@ -167,6 +167,9 @@ header#header nav.gnb.hide {
     align-items: center;
     justify-content: center;
 }
+.main_con > .tit > .tit_inner a.btn_loadmap:hover {
+	background: ##E31C39;
+}
 .main_con > .tit > .tit_inner a > i.ico_info {
 	display:inline-block;
 	width:20px;
@@ -184,28 +187,6 @@ header#header nav.gnb.hide {
 	border-top:1px solid #fff;
 	border-right:1px solid #fff;
 	transform: rotate(45deg);
-}
-
-/* 타이틀 고정 */
-#solution.fixed > .tit > .tit_inner {
-	position: fixed;
-	top:0px;
-	width: inherit;
-    max-width: inherit;
-	padding: 23px 0;
-	z-index: 999999;
-	transition: all 0.5s;
-}
-#solution.fixed > .tit > .tit_inner h4 {
-	font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-#solution.fixed > .tit > .tit_inner p {
-	font-size: 18px;
-    color: #535353;
-    letter-spacing: -1px;
-	margin-top:8px;
 }
 
 .main_con > .con_area {
@@ -344,7 +325,10 @@ header#header nav.gnb.hide {
 
 /* By Industry */
 .main_con.byIndustry {
-	padding-bottom:0;
+	padding:0;
+}
+.main_con > .tit > .tit_inner {
+	padding:0 20px;
 }
 .main_con > .tit > .tit_inner a.btn_byIndustry {
 	padding: 15px 26px;
@@ -357,6 +341,11 @@ header#header nav.gnb.hide {
 	display: flex;
     align-items: center;
     justify-content: center;
+	transition: all 0.3s;
+}
+.main_con > .tit > .tit_inner a.btn_byIndustry:hover {
+	color:#fff;
+	background-color:#FF6600;
 }
 .main_con > .tit > .tit_inner a.btn_byIndustry:after {
 	display:inline-block;
@@ -368,27 +357,9 @@ header#header nav.gnb.hide {
 	border-right:1px solid #FF6600;
 	transform: rotate(45deg);
 }
-
-/* 타이틀 고정 */
-.byIndustry.fixed > .tit > .tit_inner {
-	position: fixed;
-	top:0px;
-	width: inherit;
-    max-width: inherit;
-	padding: 23px 0;
-	z-index: 999999;
-	transition: all 0.5s;
-}
-.byIndustry.fixed > .tit > .tit_inner h4 {
-	font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-.byIndustry.fixed > .tit > .tit_inner p {
-	font-size: 18px;
-    color: #535353;
-    letter-spacing: -1px;
-	margin-top:8px;
+.main_con > .tit > .tit_inner a.btn_byIndustry:hover:after {
+	border-top:1px solid #FFf;
+	border-right:1px solid #FFf;
 }
 
 .main_con.byIndustry .con_area {
@@ -405,7 +376,7 @@ header#header nav.gnb.hide {
 .main_con.byIndustry .con_area > div > ul {
 	display: flex;
 	align-items: flex-start;
-	justify-content: flex-start;
+	justify-content: center;
 	flex-wrap: wrap;
 }
 .main_con.byIndustry .con_area > div > ul > li {
@@ -524,6 +495,12 @@ header#header nav.gnb.hide {
 
 	display: inline-flex;
     align-items: center;
+	transition:all 0.3s;
+}
+.main_con.byIndustry .con_area .btn_more:hover {
+	color:#fff;
+	background-color: #535353;
+	border: 1px solid #919191;
 }
 .main_con.byIndustry .con_area .btn_more::after {
 	display: inline-block;
@@ -534,6 +511,10 @@ header#header nav.gnb.hide {
 	border-top:1px solid #919191;
 	border-right:1px solid #919191;
 	transform:rotate(135deg);
+}
+.main_con.byIndustry .con_area .btn_more:hover::after {
+	border-top:1px solid #fff;
+	border-right:1px solid #fff;
 }
 .main_con.byIndustry .con_area .btn_more.on::after {
 	transform:rotate(-45deg);
@@ -553,28 +534,6 @@ header#header nav.gnb.hide {
 }
 
 /* DT Insight */
-/* 타이틀 고정 */
-.DTInsight.fixed .tit > .tit_inner {
-	position: fixed;
-	top:0px;
-	width: inherit;
-    max-width: inherit;
-	padding: 23px 0;
-	z-index: 999999;
-	transition: all 0.5s;
-}
-.DTInsight.fixed > .tit > .tit_inner h4 {
-	font-size: 32px;
-    text-transform: uppercase;
-    letter-spacing: -1px;
-}
-.DTInsight.fixed > .tit > .tit_inner p {
-	font-size: 18px;
-    color: #535353;
-    letter-spacing: -1px;
-	margin-top:8px;
-}
-
 .con_area.Insight_slide {
 	max-width: 100%;
 }
@@ -658,6 +617,11 @@ header#header nav.gnb.hide {
     justify-content: center;
 
 	cursor: pointer;
+	transition: all 0.3s;
+}
+.Insight_slide-next:hover, 
+.Insight_slide-prev:hover {
+	background:#919191;
 }
 .Insight_slide-next:after,
 .Insight_slide-prev:after {
@@ -672,11 +636,19 @@ header#header nav.gnb.hide {
 	transform: rotate(45deg);
 	margin-left: 5px;
 }
+.Insight_slide-next:hover:after {
+	border-left:1px solid #fff;
+	border-bottom:1px solid #fff;
+}
 .Insight_slide-prev:after {
 	border-top:1px solid #919191;
 	border-right:1px solid #919191;
 	transform: rotate(45deg);
 	margin-right: 5px;
+}
+.Insight_slide-prev:hover:after {
+	border-top:1px solid #fff;
+	border-right:1px solid #fff;
 }
 
 /* Youtube */
