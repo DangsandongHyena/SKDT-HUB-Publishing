@@ -16,19 +16,6 @@ var floatSticky = function () {
       $(".menu03, .menu02").attr("aria-hidden", "true"); $(".menu03, .menu02").css("display", "none")
     } event.preventDefault()
   });
-  if (device.val == "p")
-    $(".floating-sticky .menu-list .inner").draggable({
-      stop: function (event, ui) {
-        $(event.originalEvent.target).one("click", function (e) { e.stopImmediatePropagation() })
-      }
-    });
-  else {
-    var elTop = 0;
-    var elLeft = 0;
-    movWrap.addEventListener("touchstart", function (e) {
-      elTop = e.changedTouches[0].clientY - wrap.offsetTop - movWrap.offsetTop;
-      elLeft = e.changedTouches[0].clientX - wrap.offsetLeft - movWrap.offsetLeft
-    });
     movWrap.addEventListener("touchmove", function (e) {
       e.stopPropagation();
       e.stopImmediatePropagation();
@@ -37,6 +24,4 @@ var floatSticky = function () {
       var left = e.changedTouches[0].clientX - wrap.offsetLeft - elLeft;
       movWrap.style.cssText = "top: " + top + "px; left: " + left + "px;"
     }
-    )
-  }
-};
+)};

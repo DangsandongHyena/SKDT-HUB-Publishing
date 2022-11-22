@@ -52,7 +52,11 @@ header#header {
     border-bottom:1px solid var(--light-gray);
     transition: 0.3s ease border-bottom-color,0.3s ease background-color,0.3s ease transform;
 	z-index: 999999;
-	transition: all 0.5s;
+	transition: all 0.3s;
+}
+header#header.fixed {
+	position: fixed;
+	top:0;
 }
 header#header h1.logo {
 	position:absolute;
@@ -140,7 +144,7 @@ nav.gnb > ul > li > .deps_navi {
 .gnb-sub-cont > h2 {
     width: 260px;
 	font-size: 22px;
-    margin: 34px 23px 0;
+    margin: 34px 20px 0;
     font-weight: 400;
 }
 .gnb-sub-cont .sub-menu-list {
@@ -151,6 +155,7 @@ nav.gnb > ul > li > .deps_navi {
 	width: 750px;
     margin-top: 32px;
 	margin-bottom: 47px;
+	margin-left:0 !important;
     padding-left: 110px;
 	border-left: 1px solid #E8E8E8;
 }
@@ -202,6 +207,8 @@ nav.gnb > ul > li > .deps_navi {
 
 /* 2depth 메뉴 */
 .nav_2dp {
+	position: fixed;
+	top:105px;
 	width:100%;
 	height:50px;
 	background: linear-gradient(to right, #EA002C, #FF7A00);
@@ -209,6 +216,7 @@ nav.gnb > ul > li > .deps_navi {
 	font-size: 16px;
 	font-weight: 500;
 	z-index: 99;
+	transition: all 0.2s;
 }
 .nav_2dp.fixed {
 	position: fixed;
@@ -239,7 +247,7 @@ nav.gnb > ul > li > .deps_navi {
 	transform: rotate(-135deg);
 }
 .nav_3dp {
-	height:0;
+	display: none;
 	transition: height 0.3s ease;
 	overflow:hidden;
 	box-shadow: 0 5px 10px rgb(0 0 0 / 16%);

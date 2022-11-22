@@ -34,16 +34,23 @@
 
 	<script type="text/javascript">
 		$(document).ready(function(){
-			// 2depth nav 상단 고정
-			var header = $(".nav_2dp").offset().top;
-			$(window).scroll(function() {
-				var window = $(this).scrollTop();
-
-				if(header <= window) {
-					$(".nav_2dp").addClass("fixed");
-				} else {
+			$("body").on('mousewheel',function(e){ 
+				var wheel = e.originalEvent.wheelDelta; 
+				if(wheel>0){ 
+					//스크롤 올릴때 
+					$("#header").addClass("fixed");
 					$(".nav_2dp").removeClass("fixed");
+					$(".main-section").addClass("top");
+				} else { 
+					//스크롤  내릴때 
+					$("#header").removeClass("fixed");
+					$(".nav_2dp").addClass("fixed");
+					$(".main-section").removeClass("top");
 				}
+			});
+
+			$(".btn_open_3dp").click(function() {
+				$(this).next().toggle("blind");
 			});
 
 			// 3depth tab 상단 고정
@@ -58,7 +65,7 @@
 				}
 			});
 
-			smoothScroll();
+
 			initHeaderGnb(); //Header GNB 
 			floatSticky(); //quick
 		});
@@ -83,7 +90,7 @@
 <body data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
 <div id="wrap" style="min-height:100%;">
 	<!-- header -->
-	<header id="header" class="on" style="transform: translateY(0px);">
+	<header id="header" class="on fixed" style="transform: translateY(0px);">
 		<h1 class="logo"><a href="#none"><img src="../static/images/common/logo.svg" alt="SK C&C DT Hub"></a></h1>
 		<nav class="gnb">
 			<ul>
@@ -186,7 +193,7 @@
 				<a href="#none">홈</a>
 			</li>
 			<li>
-				<a href="#none" class="btn_open_3dp" onclick="toggleExpand(document.getElementById('nav_3dp'));">산업별솔루션<i class="ico_arrow"></i></a>
+				<a href="#none" class="btn_open_3dp">산업별솔루션<i class="ico_arrow"></i></a>
 				<ul class="nav_3dp" id="nav_3dp_01">
 					<li>
 						<a href="#none">AI/DATA</a>
@@ -203,7 +210,7 @@
 				</ul>
 			</li>
 			<li>
-				<a href="#none" class="btn_open_3dp" onclick="toggleExpand(document.getElementById('nav_3dp_02'));">AI 어드바이저<i class="ico_arrow"></i></a>
+				<a href="#none" class="btn_open_3dp">AI 어드바이저<i class="ico_arrow"></i></a>
 				<ul class="nav_3dp" id="nav_3dp_02">
 					<li>
 						<a href="#none">AI 어드바이저</a>
@@ -241,7 +248,7 @@
 	<!-- container -->
 	<div id="container" class="container main">
 		<!-- main visual -->
-		<div class="main-section">
+		<div class="main-section top">
 			<div>
 				<div data-aos="fade-up" data-aos-duration="700" data-aos-delay="500"><img src="../static/images/img_chainZ.svg""></div>
 				<p class="main_txt" aos="fade-up" data-aos="fade-up" data-aos-duration="700" data-aos-delay="700">

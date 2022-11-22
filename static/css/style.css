@@ -7,6 +7,10 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	transition: all 0.3s;
+}
+.main-section.top {
+	margin-top:105px;
 }
 .main-section .main_txt {
 	font-size:62px;
@@ -29,11 +33,20 @@
     border-radius: 30px;
 	font-weight: 700;
     color: #EA002C;
+	transition:all 0.3s;
+}
+.main-section .btn_group > a:hover {
+	color:#fff;
+	background:#EA002C;
 }
 .main-section .btn_group > a:last-child {
 	margin-left:20px;
 	border:2px solid #FF8B3E;
 	color:#FF6600;
+}
+.main-section .btn_group > a:hover:last-child {
+	color:#fff;
+	background:#FF6600;
 }
 .main-section .btn_group > a > i {
 	display:inline-block;
