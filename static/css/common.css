@@ -64,7 +64,6 @@ header#header.gnb_open {
 header#header nav.gnb {
     z-index: 1;
     margin-top: 16px;
-	width:1318px;
 	display:flex;
 	align-items: flex-end;
 	justify-content: center;
@@ -87,6 +86,7 @@ header#header nav.gnb > ul > li > a {
 header#header nav.gnb > ul > li > i.bar {
 	width:1px;
 	height:12px;
+	margin:0 20px;
 	background-color: #919191;
 }
 /* 네비 밑줄 */
@@ -125,12 +125,14 @@ nav.gnb > ul > li > .deps_navi {
 .gnb-sub-cont {
 	display: flex;
     align-items: flex-start;
-    justify-content: center;
+    justify-content: flex-start;
+	margin: 0 auto;
+    transform: translateX(23px);
 }
 .gnb-sub-cont > h2 {
     width: 260px;
 	font-size: 22px;
-    margin-top: 34px;
+    margin: 34px 23px 0;
     font-weight: 400;
 }
 .gnb-sub-cont .sub-menu-list {
@@ -141,7 +143,7 @@ nav.gnb > ul > li > .deps_navi {
 	width: 750px;
     margin-top: 32px;
 	margin-bottom: 47px;
-    padding-left: 81px;
+    padding-left: 110px;
 	border-left: 1px solid #E8E8E8;
 }
 
@@ -376,6 +378,7 @@ nav.gnb > ul > li > .deps_navi {
 	display: flex;
 	align-items: flex-end;
 	justify-content: space-between;
+	width:90%;
 	max-width: 1920px;
 	margin: 0 auto;
 	padding:83px 0 78px 0;
@@ -397,6 +400,9 @@ nav.gnb > ul > li > .deps_navi {
 .footer_con .info > ul > li {
 	padding:0 20px;
 	border-right:1px solid #646464;
+}
+.footer_con .info > ul > li:last-child {
+	border:none;
 }
 .footer_con .info>ul>li:first-child {
 	padding-left:0;
@@ -424,7 +430,7 @@ nav.gnb > ul > li > .deps_navi {
 	display: block;
 	width: 64px; height: 64px;
 	border-radius: 50%;
-	background: url('../images/common/btn_quick.svg');
+	background: linear-gradient(to top, #EA002C 50%, #FF7A00);
 	background-size: cover;
 	overflow: hidden;
 	z-index: 2;
@@ -433,7 +439,7 @@ nav.gnb > ul > li > .deps_navi {
 	position: relative;
 	display: block;
 	height: 100%;
-	background: url('../images/common/btn_quick.svg');
+	background-image: url('../images/common/btn_quick.png');
 	background-size: cover;
 	transition: transform .35s;
 	font-size: 0;
@@ -442,6 +448,7 @@ nav.gnb > ul > li > .deps_navi {
 .floating-sticky .menu-list .inner,
 .floating-sticky .menu-list ul {
 	display: flex;
+	align-items: flex-end;
 	flex-direction: column-reverse;
 }
 .floating-sticky .menu-list li {
@@ -484,6 +491,7 @@ nav.gnb > ul > li > .deps_navi {
 	top: 0; left: 0;
 	background-repeat: no-repeat;
 	background-size: auto 100%;
+	z-index: 1;
 }
 .floating-sticky .menu-list li,
 .floating-sticky .menu-list li a,
@@ -491,31 +499,35 @@ nav.gnb > ul > li > .deps_navi {
 	width: 64px; 
 	height: 64px; 
 	box-sizing: border-box;
+	transition: all 0.3s;
 }
-.floating-sticky .menu-list li a:hover {width: 192px;}
+.floating-sticky .menu-list li a:hover,
+.floating-sticky .menu-list li a:before {width: 192px;}
+
 .floating-sticky .menu-list li.menuAr a {padding: 0;}
 .floating-sticky .menu-list li.menuAr a:hover {width: 64px;}
+
+.floating-sticky .menu-list li.menu01 a:before {background: -8px 0 url('../images/common/ico_download.png') no-repeat;}
 .floating-sticky .menu-list li.menu01 a {
-	background-image: url('../images/common/ico_download.svg');
-	background: linear-gradient(to right, #FF7A00 70%, #EA002C);
+	background: linear-gradient(to right, #FF7A00 80%, #EA002C);
 }
-.floating-sticky .menu-list li.menu01 a:before {background-image: url('../images/common/ico_download.svg');}
+
+.floating-sticky .menu-list li.menu02 a:before {background: 0 0 url('../images/common/ico_demo.png') no-repeat;}
 .floating-sticky .menu-list li.menu02 a {
-	background-image: url('../images/common/ico_demo.svg');
-	background: #EA002C;
+	background: linear-gradient(to right, #EA002C 80%, #FF7A00);
 }
-.floating-sticky .menu-list li.menu02 a:before {background-image: url('../images/common/ico_demo.svg');}
+
+.floating-sticky .menu-list li.menu03 a:before {background: -9px 0 url('../images/common/ico_chet.png') no-repeat;}
 .floating-sticky .menu-list li.menu03 a {
-	background-image: url('../images/common/ico_chet.svg');
-	background: #FF7A00;
+	background: linear-gradient(to right, #FF7A00 80%, #EA002C);
 }
-.floating-sticky .menu-list li.menu03 a:before {background-image: url('../images/common/ico_chet.svg');}
 
 .button-child > p {
 	font-size:14px;
 	font-weight: 700;
 	color:#fff;
 	margin-left:10px;
+	z-index: 10;
 }
 .button-child > p > span {
 	display:block;

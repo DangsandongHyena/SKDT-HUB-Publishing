@@ -36,7 +36,9 @@
 
 	<script type="text/javascript">
 		$(document).ready(function () {
-			
+
+			// SOLUTION ROADMAP 탭
+			$("#tabs_roadmap").tabs();
 
 			smoothScroll();
 			initHeaderGnb(); //Header GNB 
@@ -208,7 +210,7 @@
 					<li><a href="#Industry">BY INDUSTRY</a></li>
 					<li><a href="#Insight">DT INSIGHT</a></li>
 					<li><a href="#video">VIDEO CONTENTS</a></li>
-				</ul>
+				</ul> 
 			</div>
 
 			<!-- Solution Roadmap -->
@@ -227,18 +229,18 @@
 					</div>
 				</div>
 				<div class="con_area">
-					<div id="tabs_roadmap" data-aos="fade-up" data-aos-duration="700" data-aos-delay="500">
+					<div id="tabs_roadmap" >
 						<ul class="tabs_btn">
-							<li><a href="#roadmap-1">
+							<li><a href="#roadmap-1" onclick="javascript:js(); event.preventDefault();">
 									<p>AI/DATA</p>
 								</a></li>
-							<li><a href="#roadmap-2">
+							<li><a href="#roadmap-2" onclick="javascript:js(); event.preventDefault();">
 									<p>BLOCKCHAIN</p>
 								</a></li>
-							<li><a href="#roadmap-3">
+							<li><a href="#roadmap-3" onclick="javascript:js(); event.preventDefault();">
 									<p>CLOUD</p>
 								</a></li>
-							<li><a href="#roadmap-4">
+							<li><a href="#roadmap-4" onclick="javascript:js(); event.preventDefault();">
 									<p>산업별 솔루션</p>
 								</a></li>
 						</ul>
@@ -927,8 +929,7 @@
 			}
 		});
 
-		// SOLUTION ROADMAP 탭
-		$("#tabs_roadmap").tabs();
+		
 		
 		// BY INDUSTRY 더보기
 		$('.btn_more').click(function() {
