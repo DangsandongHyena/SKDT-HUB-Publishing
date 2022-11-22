@@ -9,6 +9,41 @@
 		align-items: stretch;
 	}
 }
+@media(max-width:1318px){
+	.main_digital_area {
+		height: 400px;
+	}
+	.main_digital_area > h4 {
+		font-size: 24px;
+	}
+	.main_digital_area > p {
+		font-size: 18px;
+	}
+
+	.video_con .tit h4 {
+		font-size: 32px;
+	}
+	.video_con .tit p {
+		font-size: 18px;
+	}
+
+	.cs {
+		height:700px;
+	}
+	.cs p {
+		font-size: 18px;
+	}
+	.cs h4 {
+		margin-top: 20px;
+		font-size: 24px;
+	}
+	.cs a {
+		display: inline-block;
+		padding: 16px 40px;
+		margin-top: 50px;
+		font-size: 16px;
+	}
+}
 @media(max-width:768px){/* 모바일 main 시작*/
 	#wrap {
 		min-width: unset;

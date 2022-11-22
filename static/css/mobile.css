@@ -83,6 +83,8 @@
 }
 @media(max-width:1318px){/* 모바일 시작*/
 	header#header {
+		position: fixed;
+		top:0;
 		height:58px;
 		padding:6px 15px;
 		transition: all 0.5s;
@@ -142,11 +144,105 @@
 		font-weight: 300;
 	}
 
-	/* 메인 비주얼 ----------------------------------------- */
+	/* 서브 메인 비주얼 ----------------------------------------- */
+	.main-section {
+		height:auto;
+		margin:48px 20px;
+	}
+	.main-section.top {
+		margin-top:157px;
+	}
+	.main-section .main_txt {
+		font-size: 45px;
+    	line-height: 54px;
+	}
+
+	.main-section .btn_group > a {
+		width:200px;
+	}
+	.main-section .btn_group > a > i {
+		margin: 0 10px;
+	}
+	
+	.main-section .btn_group {
+		margin-top: 19px;
+	}
+	.main-section .btn_group > a {
+		justify-content: space-between;
+		padding-left:20px;
+	}
+	.main-section .btn_group > a:last-child {
+		margin-left: 10px;
+	}
+	.main-section .btn_group > a > i {
+		display:inline-block;
+		width:24px;
+		height:24px;
+		margin:0 15px 0 0;
+	}
+	.main-section .btn_group > a > i.ico_arrow_01 {
+		background:url(../images/ico_arrow_01.svg);
+	}
+	.main-section .btn_group > a > i.ico_arrow_02 {
+		background:url(../images/ico_arrow_02.svg);
+	}
+	.main-section > img {
+		width: 480px;
+		margin-top: 30px;
+		align-self: flex-end;
+	}
+
+	.nav_2dp {
+		top: 58px !important;
+	}
+
+	/* 3depth */
+	.tab-btns {
+		overflow-x: auto;
+	}
+	.tab-btns .ui-tabs-nav > li.ui-state-default > a {
+		width:auto;
+		padding:0 24px;
+		font-size:14px;
+		white-space: nowrap;
+	}
+
+	/* sub 컨텐츠 영역 */
+	.sub_con {
+		padding:50px 20px;
+	}
+	.sub_con > .intro {
+		flex-direction: column;
+	}
+	.sub_con > .intro h4 {
+		margin-bottom:20px;
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.sub_con > .intro h4 > span {
+		display: inline;
+	}
+	.sub_con > .intro p {
+		font-size: 15px;
+		line-height: 22px;
+	}
+	.sub_con > .intro > img {
+		width: 280px;
+		margin-top: 20px;
+	}
+
+	
+
+}
+@media(max-width:768px){
+	/* 서브 메인 비주얼 ----------------------------------------- */
 	.main-section {
 		height:auto;
 		margin:48px 20px;
 		flex-direction: column;
+	}
+	.main-section.top {
+		margin-top:157px;
 	}
 	.main-section .main_txt {
 		font-size:30px;
@@ -193,6 +289,10 @@
 		align-self: flex-end;
 	}
 
+	.nav_2dp {
+		top: 58px;
+	}
+
 	/* 3depth */
 	.tab-btns {
 		overflow-x: auto;
@@ -227,39 +327,4 @@
 		width: 280px;
 		margin-top: 20px;
 	}
-
-	.main_digital_area {
-		height: 400px;
-	}
-	.main_digital_area > h4 {
-		font-size: 24px;
-	}
-	.main_digital_area > p {
-		font-size: 18px;
-	}
-
-	.video_con .tit h4 {
-		font-size: 32px;
-	}
-	.video_con .tit p {
-		font-size: 18px;
-	}
-
-	.cs {
-		height:700px;
-	}
-	.cs p {
-		font-size: 18px;
-	}
-	.cs h4 {
-		margin-top: 20px;
-		font-size: 24px;
-	}
-	.cs a {
-		display: inline-block;
-		padding: 16px 40px;
-		margin-top: 50px;
-		font-size: 16px;
-	}
-
 }
