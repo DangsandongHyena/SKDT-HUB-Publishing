@@ -248,7 +248,7 @@ nav.gnb > ul > li > .deps_navi {
 }
 .nav_3dp {
 	display: none;
-	transition: height 0.3s ease;
+	transition: all 0.3s;
 	overflow:hidden;
 	box-shadow: 0 5px 10px rgb(0 0 0 / 16%);
 }
