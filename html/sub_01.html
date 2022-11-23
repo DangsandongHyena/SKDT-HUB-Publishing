@@ -56,7 +56,7 @@
 			// 3depth tab 상단 고정
 			var tabBtns = $(".tab-btns").offset().top;
 			$(window).scroll(function() {
-				var window = $(this).scrollTop(1000, 'ease-in');
+				var window = $(this).scrollTop();
 
 				if(tabBtns <= window) {
 					$(".tab-btns").addClass("fixed");
