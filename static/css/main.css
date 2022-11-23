@@ -157,7 +157,7 @@ header#header nav.gnb.hide {
 	margin-top:10px;
 }
 .main_con > .tit > .tit_inner a.btn_loadmap {
-	padding: 15px 26px;
+	padding: 15px 45px 15px 26px;
     background: #E31C39;
     font-size: 16px;
     color: #fff;
@@ -184,9 +184,15 @@ header#header nav.gnb.hide {
 	width:8px;
 	height:8px;
 	margin-left:10px;
+	margin-right: 25px;
 	border-top:1px solid #fff;
 	border-right:1px solid #fff;
 	transform: rotate(45deg);
+	position: absolute;
+	right: 0;	
+}
+.main_con>.tit>.tit_inner a:hover:after {
+	animation: arrow_r .6s ease-in-out .3s infinite alternate;
 }
 
 .main_con > .con_area {
@@ -819,4 +825,14 @@ header#header nav.gnb.hide {
 	border-right:1px solid #fff;
 	transform: rotate(45deg);
 	margin-left: 17px;
+}
+
+@-webkit-keyframes arrow_r {
+	0%   {right: 0px;}
+	100% {right: 5px;}
+}
+
+@keyframes arrow_r {
+	0%   {right: 0px;}
+	100% {right: 5px;}
 }
