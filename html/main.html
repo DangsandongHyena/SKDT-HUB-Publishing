@@ -902,6 +902,8 @@
 			var sub1_top = $('#solution').offset().top;
 			var sub2_top = $('.byIndustry').offset().top;
 			var sub3_top = $('.DTInsight').offset().top;
+			var sub4_top = $('.video_con').offset().top;
+
 			
 			if(scroll < sub1_top + 50){
 				$('#solution').removeClass('fixed');
@@ -921,6 +923,10 @@
 			} else if(scroll > sub3_top){
 				$('.byIndustry').removeClass('fixed');
 				$('.DTInsight').addClass('fixed');
+			}
+
+			if (scroll > sub4_top - 150) {
+				$('.DTInsight').removeClass('fixed');
 			}
 		});
 
