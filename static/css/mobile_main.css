@@ -76,30 +76,35 @@
 	}
 
 	/* 타이틀 */
-	.main_con {
-		padding: 56px 0 60px;
+	.main_con,
+	.main_con.byIndustry {
+		padding: 56px 0 0;
 	}
 	.main_con>.tit {
+		padding:0;
+		height:auto;
+	}
+	.main_con>.tit > .tit_inner {
 		align-items: flex-start;
 		flex-direction: column;
 		padding: 0 20px;
 	}
-	.main_con > .tit h4 {
+	.main_con > .tit > .tit_inner h4 {
 		font-size: 25px;
 	}
-	.main_con > .tit p {
+	.main_con > .tit > .tit_inner p {
 		font-size: 14px;
 		line-height: 1.4;
 	}
-	.main_con > .tit a.btn_loadmap {
+	.main_con > .tit > .tit_inner a.btn_loadmap {
 		margin-top:20px;
 		font-size: 12px;
 	}
-	.main_con > .tit a > i.ico_info {
+	.main_con > .tit > .tit_inner a > i.ico_info {
 		width: 14px;
 		height: 14px;
 	}
-	.main_con > .tit a:after {
+	.main_con > .tit > .tit_inner a:after {
 		width: 6px;
     	height: 6px;
 	}
@@ -157,7 +162,7 @@
 	}
 
 	/*Industry*/
-	.main_con > .tit a.btn_byIndustry {
+	.main_con > .tit > .tit_inner a.btn_byIndustry {
 		display: none;
 	}
 	.main_con.byIndustry > .tit.fixed {
