@@ -725,7 +725,7 @@ header#header nav.gnb.hide {
 }
 
 .video_con .con_area {
-	flex:1;
+	flex:1.2;
 	overflow:hidden;
 }
 .video_con .swiper-slide {
