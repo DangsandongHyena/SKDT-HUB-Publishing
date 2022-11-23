@@ -5,7 +5,7 @@
 		top:0px;
 		width: inherit;
 		max-width: inherit;
-		padding: 23px 0;
+		padding: 23px 20px;
 		z-index: 999999;
 		transition: all 0.5s;
 	}
