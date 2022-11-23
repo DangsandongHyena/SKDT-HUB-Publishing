@@ -278,9 +278,31 @@
 	.video_con {
 		flex-direction: column;
 	}
+	.video_con .tit {
+		align-items: flex-start;
+    	flex-direction: column;
+		padding:0 20px;
+	}
+	.video_con .tit h4 {
+		font-size:25px
+	}
+	.video_con .tit p {
+		font-size: 14px;
+	}
+
 	.video_con .tit a.btn_youtube {
 		margin-top: 20px;
 		margin-bottom: 32px;
+		font-size: 12px;
+	}
+	.video_con .tit a.btn_youtube .ico_sk {
+		width: 20px;
+		height: 20px;
+		background: #fff url(../images/common/sk_cnc.svg) center no-repeat;
+		background-size: contain;
+	}
+	.video_con .tit a.btn_youtube:after {
+		margin-right:20px;
 	}
 	.video_slide_btn {
 		display: none;
