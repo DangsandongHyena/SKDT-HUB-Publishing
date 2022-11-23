@@ -438,10 +438,10 @@ nav.gnb > ul > li > .deps_navi {
 /* quick */
 .floating-sticky {
 	position: fixed;
-	width: 64px;
 	bottom: 20px; right: 32px;
-	z-index: 190;
+	width: 64px;
 	text-align: center;
+	z-index: 9999999;
 }
 .floating-sticky .menu-list {margin-bottom: 12px; position: relative; z-index: 200; }
 .floating-sticky .menu-list .inner {position: relative;}
