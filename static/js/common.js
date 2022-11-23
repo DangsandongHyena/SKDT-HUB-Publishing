@@ -23,6 +23,7 @@ function initHeaderGnb() {
             header.addClass("gnb_open")
 
             gDeps2ListItem.css("width", (gnbWidth));
+            gDeps2ListItem.css("display", "flex");
 
             
 

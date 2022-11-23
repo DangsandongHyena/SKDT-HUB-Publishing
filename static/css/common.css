@@ -135,11 +135,13 @@ nav.gnb > ul > li > .deps_navi {
     background-color: #fff;
 }
 .gnb-sub-cont {
+	
 	display: flex;
     align-items: flex-start;
     justify-content: flex-start;
 	margin: 0 auto;
     transform: translateX(70px);
+	display: none;
 }
 .gnb-sub-cont > h2 {
     width: 260px;
