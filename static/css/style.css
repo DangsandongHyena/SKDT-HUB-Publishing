@@ -57,6 +57,7 @@
 	margin-right:42px;
 	position: absolute;
 	right:0px;
+	animation: arrow_r .6s ease-in-out .3s infinite alternate;
 }
 .main-section .btn_group > a > i.ico_arrow_01 {
 	background:url(../images/ico_arrow_01.svg);
@@ -66,7 +67,7 @@
 }
 .main-section .btn_group > a:hover > i {
 	background:url(../images/ico_arrow_03.svg) !important;
-	animation: arrow_r .6s ease-in-out .3s infinite alternate;
+	animation:none;
 }
 
 @-webkit-keyframes arrow_r {

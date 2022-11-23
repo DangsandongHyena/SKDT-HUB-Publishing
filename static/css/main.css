@@ -192,7 +192,7 @@ header#header nav.gnb.hide {
 	right: 0;	
 }
 .main_con>.tit>.tit_inner a:hover:after {
-	animation: arrow_r .6s ease-in-out .3s infinite alternate;
+	/* animation: arrow_r .6s ease-in-out .3s infinite alternate; */
 }
 
 .main_con > .con_area {
@@ -337,7 +337,7 @@ header#header nav.gnb.hide {
 	padding:0 20px;
 }
 .main_con > .tit > .tit_inner a.btn_byIndustry {
-	padding: 15px 26px;
+	padding: 15px 45px 15px 26px;
     background: #fff;
     font-size: 16px;
     color: #FF6600;
@@ -494,7 +494,7 @@ header#header nav.gnb.hide {
 
     width: auto;
     height: auto;
-	padding: 10px 32px;
+	padding: 10px 51px 10px 32px;
 	margin: 50px 0;
     margin-left: 50%;
 	transform: translateX(-50%);
@@ -514,13 +514,20 @@ header#header nav.gnb.hide {
 	width:8px;
 	height:8px;
 	margin-left:10px;
+	margin-right:24px;
+	margin-bottom: 18px;
 	border-top:1px solid #919191;
 	border-right:1px solid #919191;
 	transform:rotate(135deg);
+
+	position: absolute;
+	right: 0;
+	bottom:0;
 }
 .main_con.byIndustry .con_area .btn_more:hover::after {
 	border-top:1px solid #fff;
 	border-right:1px solid #fff;
+	/* animation: arrow_b .6s ease-in-out .3s infinite alternate; */
 }
 .main_con.byIndustry .con_area .btn_more.on::after {
 	transform:rotate(-45deg);
@@ -624,6 +631,8 @@ header#header nav.gnb.hide {
 
 	cursor: pointer;
 	transition: all 0.3s;
+
+	position: relative;
 }
 .Insight_slide-next:hover, 
 .Insight_slide-prev:hover {
@@ -635,26 +644,33 @@ header#header nav.gnb.hide {
 	content:'';
 	width:8px;
 	height:8px;
+
+	position: absolute;
+
 }
 .Insight_slide-next:after {
 	border-left:1px solid #919191;
 	border-bottom:1px solid #919191;
 	transform: rotate(45deg);
-	margin-left: 5px;
+	margin-right: 8px;
+	right: 0;
 }
 .Insight_slide-next:hover:after {
 	border-left:1px solid #fff;
 	border-bottom:1px solid #fff;
+	/* animation: arrow_r .6s ease-in-out .3s infinite alternate; */
 }
 .Insight_slide-prev:after {
 	border-top:1px solid #919191;
 	border-right:1px solid #919191;
 	transform: rotate(45deg);
-	margin-right: 5px;
+	margin-left: 8px;
+	left:0;
 }
 .Insight_slide-prev:hover:after {
 	border-top:1px solid #fff;
 	border-right:1px solid #fff;
+	/* animation: arrow_l .6s ease-in-out .3s infinite alternate; */
 }
 
 /* Youtube */
@@ -691,7 +707,7 @@ header#header nav.gnb.hide {
 }
 
 .video_con .tit a.btn_youtube {
-	padding: 6px 26px 6px 6px;
+	padding: 6px 45px 6px 6px;
     background: #E31C39;
     font-size: 16px;
     color: #fff;
@@ -703,6 +719,8 @@ header#header nav.gnb.hide {
 
 	margin-top:38px;
 	margin-bottom:61px;
+
+	position: relative;
 }
 .video_con .tit a.btn_youtube > i.ico_info {
 	display:inline-block;
@@ -717,9 +735,16 @@ header#header nav.gnb.hide {
 	width:8px;
 	height:8px;
 	margin-left:10px;
+	margin-right:24px;
 	border-top:1px solid #fff;
 	border-right:1px solid #fff;
 	transform: rotate(45deg);
+
+	position: absolute;
+	right: 0;
+}
+.video_con .tit a.btn_youtube:hover:after {
+	/* animation: arrow_r .6s ease-in-out .3s infinite alternate; */
 }
 .video_con .tit a.btn_youtube .ico_sk {
 	width: 37px;
@@ -765,6 +790,9 @@ header#header nav.gnb.hide {
     justify-content: center;
 
 	cursor: pointer;
+	transition: all 0.3s;
+
+	position: relative;
 }
 .video_slide-next:after,
 .video_slide-prev:after {
@@ -772,12 +800,24 @@ header#header nav.gnb.hide {
 	content:'';
 	width:8px;
 	height:8px;
+	position: absolute;
 }
 .video_slide-next:after {
 	border-left:1px solid #919191;
 	border-bottom:1px solid #919191;
 	transform: rotate(45deg);
 	margin-left: 5px;
+	margin-right:8px;
+	right:0;
+}
+.video_slide-next:hover,
+.video_slide-prev:hover {
+	background: #919191;
+}
+.video_slide-next:hover:after {
+	border-left: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+	/* animation: arrow_r .6s ease-in-out .3s infinite alternate; */
 }
 .video_slide-prev:after {
 	border-top:1px solid #919191;
@@ -786,6 +826,11 @@ header#header nav.gnb.hide {
 	margin-right: 5px;
 }
 
+.video_slide-prev:hover:after {
+	border-top: 1px solid #fff;
+	border-right: 1px solid #fff;
+	/* animation: arrow_l .6s ease-in-out .3s infinite alternate; */
+}
 /* 회사소개 */
 .cs {
 	height:1087px;
@@ -835,4 +880,32 @@ header#header nav.gnb.hide {
 @keyframes arrow_r {
 	0%   {right: 0px;}
 	100% {right: 5px;}
+}
+
+@-webkit-keyframes arrow_b {
+	0% {bottom: -2px;}
+
+	100% {bottom: 2px;}
+}
+
+@keyframes arrow_b {
+	0% {bottom: -2px;}
+
+	100% {bottom: 2px;}
+}
+
+@-webkit-keyframes arrow_r {
+	0% {
+		right: 0px;
+	}
+
+	100% {
+		right: 5px;
+	}
+}
+
+@keyframes arrow_l {
+	0% {left: 0px;}
+
+	100% {left: 5px;}
 }
